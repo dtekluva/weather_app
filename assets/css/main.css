@@ -1,0 +1,120 @@
+*{
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif;
+}
+h3{
+    padding: 1vw;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body, .body_overlay{
+    width: 100%;
+    height: 100%;
+    background-image: url(../imgs/intersection.png);
+    background-repeat:repeat;
+}
+
+.body_overlay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.weather_app_container{
+    width: 600px;
+    min-height: 60vw;
+    background-color: #f4f4f4; 
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.fixed{
+    background-color: rgb(157, 180, 190);
+    height: 50px;
+    width: 100%;
+}
+.header{
+    background-color: rgb(157, 180, 190);
+    height: 50px;
+    width: 600px;
+    position: fixed;
+}
+.footer{
+    background-color: rgb(157, 180, 190);
+    height: 20px;
+}
+
+.city_input, select{
+    margin-top: 5px; 
+    border-radius: 5px;
+    background-color: rgb(208, 216, 223);
+    width: 90%;
+    height: 50px;
+    text-align: center;
+    
+}
+
+.weather_details{
+    min-height: 50vh;
+    width: 85%;
+    background-color: white;
+    box-shadow: 0px 1px 5px #8888C7;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 5px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+   
+}
+
+.weather_details div{
+    display:flex;
+    
+}
+.weather_details div span{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align:center;
+    color: rgb(155, 154, 154);
+}
+.splash{
+    height: 400px;
+    width : 400px;
+    background-image: url("../imgs/splash.webp");
+    background-size: 100%;
+    margin: 30px auto ;
+
+}
+.loader{
+    height: 5px;
+    width: 80%;
+    background-color: rgb(157, 180, 190);
+    margin: auto;
+    margin-top: 30px;
+    border-radius: 10px;
+    
+}
+.slider{
+    height: 100%;
+    width: 50px;
+    background-color: #f4f4f4;
+    animation: none;
+    margin:auto;
+    border-radius: 10px;
+}
+@keyframes slide{
+    0%{
+        margin-left: 430px;
+    }
+    100%{
+        margin-left: 0px;
+    }
+}
