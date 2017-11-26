@@ -67,7 +67,7 @@ function make_request(city_id){
             populate_weather_data(JSON.parse(this.responseText));
         }
     };
-    xhttp.open("GET", "http://api.openweathermap.org/data/2.5/forecast?id=" + city_id + "&APPID=7d740708090dd65a4ddd2db1f445504e", true);
+    xhttp.open("GET", "https://api.openweathermap.org/data/2.5/forecast?id=" + city_id + "&APPID=7d740708090dd65a4ddd2db1f445504e", true);
     xhttp.send();
 };
 
