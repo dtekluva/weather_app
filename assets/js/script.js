@@ -88,3 +88,12 @@ function populate_weather_data(jason_data){
         splash_target[0].style.display   = "none";        
     });
 };
+
+async function getText(file) {
+    let myObject = await fetch(file);
+    let myText = await myObject.json();
+    console.log(myText);
+    document.getElementById("target").innerText = myText.authenticatedData.name;
+    }
+
+getText("https://wyre22.pythonanywhere.com/api/v1/dashboard/2/01-12-2020%2000:00/20-12-2020%2000:00")
