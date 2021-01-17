@@ -89,11 +89,31 @@ function populate_weather_data(jason_data){
     });
 };
 
-async function getText(file) {
-    let myObject = await fetch(file);
-    let myText = await myObject.json();
-    console.log(myText);
-    document.getElementById("target").innerText = myText.authenticatedData.name;
-    }
+// async function getText(file) {
+//     let myObject = await fetch(file);
+//     let myText = await myObject.json();
+//     console.log(myText);
+//     document.getElementById("target").innerText = myText.authenticatedData.name;
+//     }
 
-getText("https://wyre22.pythonanywhere.com/api/v1/dashboard/2/01-12-2020%2000:00/20-12-2020%2000:00")
+// getText("https://wyre22.pythonanywhere.com/api/v1/dashboard/2/01-12-2020%2000:00/20-12-2020%2000:00")
+
+var url = "https://wyre22.pythonanywhere.com/api/v1/dashboard/2/01-12-2020%2000:00/20-12-2020%2000:00";
+var auth = "https://wyre22.pythonanywhere.com/api/v1/auth/";
+
+(async () => {
+    const rawResponse = await fetch(auth, {
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+                                "username": "admin",
+                                "password" : "19sedimat54"
+                            })
+    });
+    const content = await rawResponse.json();
+  
+    console.log(content);
+  })();
